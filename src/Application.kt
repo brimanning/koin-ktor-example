@@ -22,10 +22,8 @@ fun Application.module() {
         })
     }
 
-    // Lazy inject HelloService
     val service: SomeService by inject()
 
-    // Routing section
     routing {
         get("/") {
             call.respondText(service.helloMessage())
